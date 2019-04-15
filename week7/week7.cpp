@@ -38,6 +38,19 @@ Menu *week7 = new Menu(u8"面向对象程序设计上机练习（二）", std::v
 
           std::cout << "5. 见代码" << std::endl;
           std::cout << std::endl;
+        },
+        {
+          u8"Book 类",
+          [](){
+            std::cout << "5. 见代码" << std::endl;
+            std::cout << std::endl;
+          }
+        },
+        {
+          u8"Card 类",
+          [](){
+            //
+          }
         }
     }
 });
