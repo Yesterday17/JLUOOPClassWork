@@ -23,10 +23,10 @@ Menu *week6 = new Menu(u8"面向对象程序设计上机练习（一）", std::v
                        u8"int max(const int, const int);\n"
                        u8"const int max(int, int); // 上三者等价\n"
                        u8"int max(int&, int&);\n"
-                       u8"const int& max(int&, int&);\n"
-                       u8"int& max(int&, int&); // 上三者等价\n"
+                       u8"const int& max(int&, int&); // 上二者等价\n"
                        u8"int& max(const int&, const int&);\n"
-                       u8"const int& max(const int&, const int&); // 上二者等价" << std::endl;
+                       u8"const int& max(const int&, const int&); "
+                       u8"int& max(int&, int&);// 上三者等价\n" << std::endl;
         }
     },
     {
