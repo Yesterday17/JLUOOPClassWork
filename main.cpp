@@ -2,7 +2,6 @@
 #include <sstream>
 
 #include "./menu/Menu.h"
-#include "week6/week6.h"
 
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__TOS_WIN__) || defined(__WINDOWS__)
 #include <windows.h>
@@ -16,6 +15,9 @@ class MBuf : public std::stringbuf {
 };
 #endif
 
+extern Menu* week6;
+extern Menu* week7;
+
 int main(int argc, char **argv) {
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__TOS_WIN__) || defined(__WINDOWS__)
   SetConsoleOutputCP(CP_UTF8);
@@ -25,7 +27,7 @@ int main(int argc, char **argv) {
 #endif
   Clear();
   Menu *menu = new Menu(u8"OOP Homework", std::vector<Menu *>{
-      week6
+      week6, week7
   });
   menu->Print();
   menu->Wait();

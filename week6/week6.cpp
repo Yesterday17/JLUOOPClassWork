@@ -1,14 +1,13 @@
 //
 // Created by t on 4/8.
 //
-
-#include "week6.h"
 #include <iostream>
 
 #include "1/Header.h"
 #include "3/Header.h"
 #include "5/TRandom.h"
 #include "6/Dice.h"
+#include "../menu/Menu.h"
 
 Menu *week6 = new Menu(u8"面向对象程序设计上机练习（一）", std::vector<MenuItem>{
     {
