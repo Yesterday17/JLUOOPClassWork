@@ -2,10 +2,10 @@
 // Created by Yesterday17 on 4/15.
 //
 
-#include "../menu/Menu.h"
-#include "./1/encrypt.h"
 #include <iostream>
 #include <string>
+#include "../menu/Menu.h"
+#include "./1/encrypt.h"
 using WEEK7_1::Encrypt;
 
 Menu *week7 = new Menu(u8"面向对象程序设计上机练习（二）", std::vector<MenuItem>{
@@ -38,19 +38,20 @@ Menu *week7 = new Menu(u8"面向对象程序设计上机练习（二）", std::v
 
           std::cout << "5. 见代码" << std::endl;
           std::cout << std::endl;
-        },
-        {
-          u8"Book 类",
-          [](){
-            std::cout << "5. 见代码" << std::endl;
-            std::cout << std::endl;
-          }
-        },
-        {
-          u8"Card 类",
-          [](){
-            //
-          }
+        }
+    },
+    {
+        u8"Book 类",
+        []() {
+          std::cout << "见代码" << std::endl;
+          std::cout << std::endl;
+        }
+    },
+    {
+        u8"Card 类",
+        []() {
+          std::cout << "见代码" << std::endl;
+          std::cout << std::endl;
         }
     }
 });
