@@ -15,8 +15,8 @@ class Equipment {
   uint64_t defense = 0;
   uint64_t magic = 0;
 
-  Equipment();
   Equipment *Equip(uint64_t ch, uint64_t pr, uint64_t at, uint64_t de, uint64_t ma, uint64_t all);
+  static void Init();
   static Equipment *equ[6];
   static Equipment *Empty;
 

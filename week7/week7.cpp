@@ -6,7 +6,9 @@
 #include <string>
 #include "../menu/Menu.h"
 #include "./1/encrypt.h"
+#include "./5/Demo.h"
 using WEEK7_1::Encrypt;
+using WEEK7_5::Demo;
 
 Menu *week7 = new Menu(u8"面向对象程序设计上机练习（二）", std::vector<MenuItem>{
     {
@@ -58,6 +60,25 @@ Menu *week7 = new Menu(u8"面向对象程序设计上机练习（二）", std::v
         u8"Hero 类",
         []() {
           std::cout << "见代码" << std::endl;
+          std::cout << std::endl;
+        }
+    },
+    {
+        u8"Demo 类",
+        []() {
+          Demo *d1 = Demo::getInstance();
+          Demo *d2 = Demo::getInstance();
+          std::cout << "d1 == d2: " << ((d1 == d2) ? "true" : "false") << std::endl;
+
+          std::cout << "Operation: d1->ShowValue():" << std::endl;
+          d1->ShowValue();
+
+          std::cout << "Operation: d1->AddValue(10);" << std::endl;
+          d1->AddValue(10);
+
+          std::cout << "Operation: d2->ShowValue():" << std::endl;
+          d2->ShowValue();
+
           std::cout << std::endl;
         }
     }
