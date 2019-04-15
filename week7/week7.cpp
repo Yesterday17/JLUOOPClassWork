@@ -7,8 +7,11 @@
 #include "../menu/Menu.h"
 #include "./1/encrypt.h"
 #include "./5/Demo.h"
+#include "./6/Monster.h"
+
 using WEEK7_1::Encrypt;
 using WEEK7_5::Demo;
+using WEEK7_6::Monster;
 
 Menu *week7 = new Menu(u8"面向对象程序设计上机练习（二）", std::vector<MenuItem>{
     {
@@ -80,6 +83,13 @@ Menu *week7 = new Menu(u8"面向对象程序设计上机练习（二）", std::v
           d2->ShowValue();
 
           std::cout << std::endl;
+        }
+    },
+    {
+        u8"Monster Fight",
+        []() {
+          Monster a, b;
+          a.fight(b);
         }
     }
 });
