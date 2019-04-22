@@ -11,8 +11,11 @@
 #include "2/Real.h"
 #include "3/GlobalFunction.h"
 #include "4/A.h"
+#include "5/Array.h"
 
 using WEEK8_2::Real;
+using WEEK8_5::Array;
+
 Menu *week8 = new Menu(u8"面向对象程序设计上机练习（三）", std::vector<MenuItem>{
     {
         u8"字符串类",
@@ -44,6 +47,14 @@ Menu *week8 = new Menu(u8"面向对象程序设计上机练习（三）", std::v
         u8"指向A类对象的一维指针数组",
         []() {
           WEEK8_4::g(10);
+        }
+    },
+    {
+        u8"动态数组",
+        []() {
+          Array<int> a(5, 6);
+          a[0][0] = 1;
+          std::cout << "a[0][0] = " << a[0][0] << std::endl;
         }
     }
 });
