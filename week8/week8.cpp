@@ -10,6 +10,7 @@
 
 #include "2/Real.h"
 #include "3/GlobalFunction.h"
+#include "4/A.h"
 
 using WEEK8_2::Real;
 Menu *week8 = new Menu(u8"面向对象程序设计上机练习（三）", std::vector<MenuItem>{
@@ -37,6 +38,12 @@ Menu *week8 = new Menu(u8"面向对象程序设计上机练习（三）", std::v
         []() {
           std::cout << "数组大小: 10*15" << std::endl;
           WEEK8_3::f(10, 15);
+        }
+    },
+    {
+        u8"指向A类对象的一维指针数组",
+        []() {
+          WEEK8_4::g(10);
         }
     }
 });
