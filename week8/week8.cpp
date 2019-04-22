@@ -8,18 +8,25 @@
 #include <iomanip>
 #include "../menu/Menu.h"
 
+#include "1/MyString.h"
 #include "2/Real.h"
 #include "3/GlobalFunction.h"
 #include "4/A.h"
 #include "5/Array.h"
 
+using WEEK8_1::MyString;
 using WEEK8_2::Real;
 using WEEK8_5::Array;
 
 Menu *week8 = new Menu(u8"面向对象程序设计上机练习（三）", std::vector<MenuItem>{
     {
         u8"字符串类",
-        []() {}
+        []() {
+          MyString str("abc");
+          std::cout << (char *) str << std::endl;
+          str += str;
+          std::cout << (char *) str << std::endl;
+        }
     },
     {
         u8"连分数类",
