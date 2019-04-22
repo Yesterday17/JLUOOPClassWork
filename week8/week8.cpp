@@ -8,7 +8,8 @@
 #include <iomanip>
 #include "../menu/Menu.h"
 
-#include "./2/Real.h"
+#include "2/Real.h"
+#include "3/GlobalFunction.h"
 
 using WEEK8_2::Real;
 Menu *week8 = new Menu(u8"面向对象程序设计上机练习（三）", std::vector<MenuItem>{
@@ -29,6 +30,13 @@ Menu *week8 = new Menu(u8"面向对象程序设计上机练习（三）", std::v
             std::cout << "前" << ans.index << "项对应分数的值为" << ans.value << std::endl;
             std::cout << "前" << ans.index << "项对应分数与" << M_PI << "的差为" << ans.offset << std::endl;
           }
+        }
+    },
+    {
+        u8"二维数组动态分配",
+        []() {
+          std::cout << "数组大小: 10*15" << std::endl;
+          WEEK8_3::f(10, 15);
         }
     }
 });
