@@ -5,6 +5,8 @@
 #include "../menu/Menu.h"
 #include "1/B.h"
 #include "2/C.h"
+#include "3/YetAnotherWallWithDoor.h"
+#include "3/WallWithDoor.h"
 
 Menu *week9 = new Menu(u8"面向对象程序设计上机练习（三）", std::vector<MenuItem>{
     {
@@ -64,7 +66,25 @@ Menu *week9 = new Menu(u8"面向对象程序设计上机练习（三）", std::v
     {
         u8"游戏",
         []() {
-          //
+          int way;
+          std::cout << "请选择单继承(0)/多继承(others)实现: ";
+          std::cin >> way;
+
+          WEEK9_3::IBaseWallWithDoor *wd;
+          if (way == 0) {
+            wd = new WEEK9_3::YetAnotherWallWithDoor();
+          } else {
+            wd = new WEEK9_3::WallWithDoor();
+          }
+
+          for (int i = 0; i < 10; i++) {
+            int color;
+
+            std::cout << "请输入粉刷的颜色(0:green, 1: red, others): ";
+            std::cin >> color;
+
+            wd->PaintWall(color);
+          }
         }
     }
 });
