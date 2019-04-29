@@ -2,8 +2,8 @@
 // Created by Yesterday17 on 4/29.
 //
 
-#ifndef OOPCLASSWORK_B_H
-#define OOPCLASSWORK_B_H
+#ifndef OOPCLASSWORK_92_B_H
+#define OOPCLASSWORK_92_B_H
 
 #include <iostream>
 #include "A.h"

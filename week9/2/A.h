@@ -2,12 +2,11 @@
 // Created by Yesterday17 on 4/29.
 //
 
-#ifndef OOPCLASSWORK_A_H
-#define OOPCLASSWORK_A_H
+#ifndef OOPCLASSWORK_92_A_H
+#define OOPCLASSWORK_92_A_H
 #include <iostream>
 
 namespace WEEK9_2 {
-
 class A {
  public:
   explicit A(int num) : data(num) {}
@@ -25,7 +24,6 @@ class AA {
  protected:
   int data;
 };
-
 }
 
 #endif //OOPCLASSWORK_A_H

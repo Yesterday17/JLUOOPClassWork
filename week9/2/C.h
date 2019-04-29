@@ -2,16 +2,17 @@
 // Created by Yesterday17 on 4/29.
 //
 
-#ifndef OOPCLASSWORK_C_H
-#define OOPCLASSWORK_C_H
+#ifndef OOPCLASSWORK_92_C_H
+#define OOPCLASSWORK_92_C_H
 
 #include <iostream>
 #include "A.h"
 #include "B.h"
+
 namespace WEEK9_2 {
 class C : public A, private B {
  public:
-  C(int num1, int num2, int y);
+  C(int num1, int num2, int y) : A(num1), B(num2), yyy(y) {}
   void MyFuncs() {
     BFuncs();
     std::cout << "This function call B::BFuncs() !" << std::endl;

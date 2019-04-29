@@ -3,8 +3,6 @@
 //
 
 #include "C.h"
-WEEK9_2::C::C(int num1, int num2, int y) : A(num1), B(num2), yyy(y) {
-}
 WEEK9_2::CC::CC(int num1, int num2, int y) : BB(num1, num2), yyy(y) {
 }
 
