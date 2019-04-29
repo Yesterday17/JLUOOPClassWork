@@ -4,6 +4,7 @@
 
 #include "../menu/Menu.h"
 #include "1/B.h"
+#include "2/C.h"
 
 Menu *week9 = new Menu(u8"面向对象程序设计上机练习（三）", std::vector<MenuItem>{
     {
@@ -48,6 +49,22 @@ Menu *week9 = new Menu(u8"面向对象程序设计上机练习（三）", std::v
           delete p;
 
           std::cout << std::endl << std::endl;
+        }
+    },
+    {
+        u8"多继承",
+        []() {
+          WEEK9_2::C c(1, 2, 3);
+          std::cout << "2. main 函数中只能调用MyFuncs()" << std::endl;
+          c.MyFuncs();
+
+          std::cout << std::endl << "3,4. 见代码" << std::endl;
+        }
+    },
+    {
+        u8"游戏",
+        []() {
+          //
         }
     }
 });
