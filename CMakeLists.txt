@@ -3,4 +3,51 @@ project(OOPClassWork)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(OOPClassWork main.cpp menu/Menu.cpp menu/Menu.h week6/week6.cpp week6/1/MyMain.cpp week6/1/Func1.cpp week6/1/Func2.cpp week6/1/Header.h week6/3/a.h week6/3/mainApp.cpp week6/3/Header.h week6/3/b.h week6/4/pen.h week6/4/folder.h week6/4/printer.h week6/4/sun.h week6/4/pen.cpp week6/4/folder.cpp week6/4/printer.cpp week6/4/sun.cpp week6/5/TRandom.cpp week6/5/TRandom.h week6/6/Dice.cpp week6/6/Dice.h week7/week7.cpp week7/1/encrypt.cpp week7/1/encrypt.h week7/2/Book.cpp week7/2/Book.h week7/3/Card.cpp week7/3/Card.h week7/4/Hero.cpp week7/4/Hero.h week7/4/Equipment.cpp week7/4/Equipment.h week7/5/Demo.h week7/6/Monster.cpp week7/6/Monster.h week8/week8.cpp week8/1/MyString.cpp week8/1/MyString.h week8/2/Real.cpp week8/2/Real.h week8/3/GlobalFunction.cpp week8/3/GlobalFunction.h week8/4/A.cpp week8/4/A.h week8/5/Array.h week9/week9.cpp week9/1/A.cpp week9/1/A.h week9/1/B.cpp week9/1/B.h week9/2/A.cpp week9/2/A.h week9/2/B.cpp week9/2/B.h week9/2/C.cpp week9/2/C.h week9/3/Wall.cpp week9/3/Wall.h week9/3/Door.cpp week9/3/Door.h week9/3/WallWithDoor.cpp week9/3/WallWithDoor.h week9/3/IBaseWallWithDoor.cpp week9/3/IBaseWallWithDoor.h week9/3/YetAnotherWallWithDoor.cpp week9/3/YetAnotherWallWithDoor.h week10/1/Thief.cpp week10/1/Thief.h week10/1/Walker.cpp week10/1/Walker.h week10/week10.cpp)
+# Menu
+aux_source_directory(menu menu)
+
+# Week 6
+aux_source_directory(week6 week6)
+aux_source_directory(week6/1 week6)
+aux_source_directory(week6/2 week6)
+aux_source_directory(week6/3 week6)
+aux_source_directory(week6/4 week6)
+aux_source_directory(week6/5 week6)
+aux_source_directory(week6/6 week6)
+
+# Week 7
+aux_source_directory(week7 week7)
+aux_source_directory(week7/1 week7)
+aux_source_directory(week7/2 week7)
+aux_source_directory(week7/3 week7)
+aux_source_directory(week7/4 week7)
+aux_source_directory(week7/5 week7)
+aux_source_directory(week7/6 week7)
+
+# Week 8
+aux_source_directory(week8 week8)
+aux_source_directory(week8/1 week8)
+aux_source_directory(week8/2 week8)
+aux_source_directory(week8/3 week8)
+aux_source_directory(week8/4 week8)
+aux_source_directory(week8/5 week8)
+
+# Week 9
+aux_source_directory(week9 week9)
+aux_source_directory(week9/1 week9)
+aux_source_directory(week9/2 week9)
+aux_source_directory(week9/3 week9)
+
+# Week 10
+aux_source_directory(week10 week10)
+aux_source_directory(week10/1 week10)
+
+set(modules
+        ${menu}
+        ${week6}
+        ${week7}
+        ${week8}
+        ${week9}
+        ${week10})
+
+add_executable(OOPClassWork main.cpp ${modules})
