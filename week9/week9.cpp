@@ -8,7 +8,7 @@
 #include "3/YetAnotherWallWithDoor.h"
 #include "3/WallWithDoor.h"
 
-Menu *week9 = new Menu(u8"面向对象程序设计上机练习（三）", std::vector<MenuItem>{
+Menu *week9 = new Menu(u8"面向对象程序设计上机练习（四）", std::vector<MenuItem>{
     {
         u8"类的继承",
         []() {
