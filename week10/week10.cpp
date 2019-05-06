@@ -11,6 +11,7 @@
 #include "3/3.h"
 #include "4/Woman.h"
 #include "5/B.h"
+#include "6/NewA.h"
 
 Menu *week10 = new Menu(u8"面向对象程序设计上机练习（五）", std::vector<MenuItem>{
     {
@@ -87,6 +88,17 @@ Menu *week10 = new Menu(u8"面向对象程序设计上机练习（五）", std::
           }
           WEEK10_5::B data(10);
           data.SetData(20);
+        }
+    },
+    {
+        u8"new/delete 计数",
+        []() {
+          auto a1 = new WEEK10_6::NewA();
+          auto a2 = new WEEK10_6::NewA();
+          auto a3 = new WEEK10_6::NewA[10]();
+          delete a1;
+          delete a2;
+          delete[] a3;
         }
     }
 });
