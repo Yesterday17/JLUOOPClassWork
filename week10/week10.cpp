@@ -12,6 +12,7 @@
 #include "4/Woman.h"
 #include "5/B.h"
 #include "6/NewA.h"
+#include "8/Paginate.h"
 
 Menu *week10 = new Menu(u8"面向对象程序设计上机练习（五）", std::vector<MenuItem>{
     {
@@ -112,6 +113,25 @@ Menu *week10 = new Menu(u8"面向对象程序设计上机练习（五）", std::
                        "因为赋值时需要保证左操作数可改，不能出现诸如 `6 = a` 的情况。\n\n"
                        "> 为什么重载 `<<`，必须用自由函数形式？"
                        "因为在 `<<` 时左值不一定为变量本身。\n\n" << std::endl;
+        }
+    },
+    {
+        u8"分页器类",
+        []() {
+          WEEK10_8::Paginate pager(1, 13);
+          for (int i = 1; i <= 13; ++i) {
+            // i当前页，13总页数
+            pager.setPage(i, 13).show();
+          }
+          std::cout << "start move...." << std::endl;
+          pager.setPage(5, 13).show();
+          pager.next().show();
+          pager.prev().show();
+
+          // 直接翻5页
+          pager.nextN().show();
+          pager.next().show();
+          pager.prevN().show();
         }
     }
 });
