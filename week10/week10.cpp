@@ -9,6 +9,7 @@
 #include "2/Policeman.h"
 #include "2/PoliceStation.h"
 #include "3/3.h"
+#include "4/Woman.h"
 
 Menu *week10 = new Menu(u8"面向对象程序设计上机练习（五）", std::vector<MenuItem>{
     {
@@ -56,6 +57,17 @@ Menu *week10 = new Menu(u8"面向对象程序设计上机练习（五）", std::
         u8"Thief & Walker & Policeman & PoliceStation",
         []() {
           WEEK10_3::main();
+        }
+    },
+    {
+        u8"Man & Woman",
+        []() {
+          WEEK10_4::Woman wo1("WO1"), wo2("WO2");
+          WEEK10_4::Man m1("M1"), m2("M2");
+
+          wo1.marry(&m2);
+          wo1.marry(&m1);
+          wo1.divorce();
         }
     }
 });
