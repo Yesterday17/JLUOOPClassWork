@@ -10,6 +10,7 @@
 #include "2/PoliceStation.h"
 #include "3/3.h"
 #include "4/Woman.h"
+#include "5/B.h"
 
 Menu *week10 = new Menu(u8"面向对象程序设计上机练习（五）", std::vector<MenuItem>{
     {
@@ -68,6 +69,24 @@ Menu *week10 = new Menu(u8"面向对象程序设计上机练习（五）", std::
           wo1.marry(&m2);
           wo1.marry(&m1);
           wo1.divorce();
+        }
+    },
+    {
+        u8"引用计数",
+        []() {
+          {
+            WEEK10_5::B data(10);
+            std::cout << "Num: " << data->GetData() << std::endl;
+            {
+              WEEK10_5::B c(data);
+              {
+                WEEK10_5::B d;
+                d = data;
+              }
+            }
+          }
+          WEEK10_5::B data(10);
+          data.SetData(20);
         }
     }
 });
