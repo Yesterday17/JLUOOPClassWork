@@ -6,6 +6,8 @@
 #include "../menu/Menu.h"
 #include "1/Walker.h"
 #include "1/Thief.h"
+#include "2/Policeman.h"
+#include "2/PoliceStation.h"
 
 Menu *week10 = new Menu(u8"面向对象程序设计上机练习（五）", std::vector<MenuItem>{
     {
@@ -31,6 +33,22 @@ Menu *week10 = new Menu(u8"面向对象程序设计上机练习（五）", std::
           b.printMoney();
           std::cout << std::endl << "F: ";
           f.printMoney();
+        }
+    },
+    {
+        u8"Policeman & PoliceStation",
+        []() {
+          WEEK10_2::PoliceStation station;
+          station.AddPoliceman("p1");
+          station.AddPoliceman("p2");
+          station.AddPoliceman("p3");
+
+          WEEK10_1::Thief t1(500), t2(800), t3(300), t4(1000);
+          station.getPoliceman("p1")->catchThief(t2);
+          station.getPoliceman("p1")->catchThief(t3);
+          station.getPoliceman("p2")->catchThief(t4);
+
+          station.PrintReport();
         }
     }
 });

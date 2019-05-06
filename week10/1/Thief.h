@@ -8,8 +8,10 @@
 #define extends :
 
 namespace WEEK10_1 {
-class Thief extends public Walker{
+class Thief extends public Walker {
  public:
+  Thief() : Walker() {};
+  explicit Thief(int money) : Walker(money) {};
   void steal(Walker &walker);
 };
 }
