@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <asptlb.h>
 #include "../menu/Menu.h"
 #include "1/A.h"
 #include "1/B.h"
@@ -10,6 +11,8 @@
 #include "3/Cat.h"
 #include "3/Dog.h"
 #include "4/Box.h"
+#include "5/ClientA.h"
+#include "5/ClientB.h"
 
 Menu *week11 = new Menu(u8"面向对象程序设计上机练习（六）", std::vector<MenuItem>{
     {
@@ -85,6 +88,33 @@ Menu *week11 = new Menu(u8"面向对象程序设计上机练习（六）", std::
           box.newDay();
           box.newDay();
           std::cout << "目前总重量为：" << box.totWeight() << std::endl;
+        }
+    },
+    {
+        u8"Client & Server",
+        []() {
+          {
+            // main1
+            std::cout << "Main 1" << std::endl;
+            WEEK11_5::Server srv2(2), srv5(5);
+            WEEK11_5::ClientA a;
+            a.RequestA(srv2);  //输出3
+            a.RequestA(srv5);  //输出15
+            std::cout << std::endl;
+          }
+          {
+            // main2
+            std::cout << "Main 2(1)" << std::endl;
+            WEEK11_5::Server srv2(2), srv3(3);
+            WEEK11_5::ClientB b;
+            b.RequestB(srv2);
+            b.RequestB(srv3);
+          }
+          {
+            // main2
+            std::cout << "Main 2(2)" << std::endl;
+            std::cout << "立方和见(6)处注释" << std::endl;
+          }
         }
     }
 });
