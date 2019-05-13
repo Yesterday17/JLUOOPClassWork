@@ -9,6 +9,7 @@
 #include "2/Monster.h"
 #include "3/Cat.h"
 #include "3/Dog.h"
+#include "4/Box.h"
 
 Menu *week11 = new Menu(u8"面向对象程序设计上机练习（六）", std::vector<MenuItem>{
     {
@@ -60,6 +61,30 @@ Menu *week11 = new Menu(u8"面向对象程序设计上机练习（六）", std::
           WEEK11_3::Cat a;
           WEEK11_3::Dog b;
           a.fight(b);
+        }
+    },
+    {
+        u8"水果盒子",
+        []() {
+          WEEK11_4::Box box;
+          box.addFruit(false);
+          box.addFruit(false);
+          box.addFruit(true);
+          std::cout << "目前总重量为：" << box.totWeight() << std::endl;
+          box.newDay();
+          std::cout << "目前总重量为：" << box.totWeight() << std::endl;
+          box.addFruit(false);
+          box.addFruit(true);
+          std::cout << "目前总重量为：" << box.totWeight() << std::endl;
+          box.newDay();
+          box.newDay();
+          std::cout << "目前总重量为：" << box.totWeight() << std::endl;
+          box.newDay();
+          box.newDay();
+          box.newDay();
+          box.newDay();
+          box.newDay();
+          std::cout << "目前总重量为：" << box.totWeight() << std::endl;
         }
     }
 });
