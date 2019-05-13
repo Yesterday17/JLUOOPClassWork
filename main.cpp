@@ -15,7 +15,7 @@ class MBuf : public std::stringbuf {
 };
 #endif
 
-extern Menu *week6, *week7, *week8, *week9, *week10;
+extern Menu *week6, *week7, *week8, *week9, *week10, *week11;
 
 int main(int argc, char **argv) {
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__TOS_WIN__) || defined(__WINDOWS__)
@@ -26,7 +26,7 @@ int main(int argc, char **argv) {
 #endif
   Clear();
   Menu *menu = new Menu(u8"OOP Homework", std::vector<Menu *>{
-      week6, week7, week8, week9, week10
+      week6, week7, week8, week9, week10, week11
   });
   menu->Print();
   menu->Wait();

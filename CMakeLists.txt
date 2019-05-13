@@ -48,12 +48,17 @@ aux_source_directory(week10/5 week10)
 aux_source_directory(week10/6 week10)
 aux_source_directory(week10/8 week10)
 
+# Week 11
+aux_source_directory(week11 week11)
+aux_source_directory(week11/1 week11)
+
 set(modules
         ${menu}
         ${week6}
         ${week7}
         ${week8}
         ${week9}
-        ${week10})
+        ${week10}
+        ${week11})
 
 add_executable(OOPClassWork main.cpp ${modules})
