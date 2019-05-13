@@ -51,6 +51,7 @@ aux_source_directory(week10/8 week10)
 # Week 11
 aux_source_directory(week11 week11)
 aux_source_directory(week11/1 week11)
+aux_source_directory(week11/2 week11)
 
 set(modules
         ${menu}

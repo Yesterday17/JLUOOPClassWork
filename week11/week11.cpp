@@ -6,6 +6,7 @@
 #include "../menu/Menu.h"
 #include "1/A.h"
 #include "1/B.h"
+#include "2/Monster.h"
 
 Menu *week11 = new Menu(u8"面向对象程序设计上机练习（六）", std::vector<MenuItem>{
     {
@@ -42,6 +43,13 @@ Menu *week11 = new Menu(u8"面向对象程序设计上机练习（六）", std::
           //---------------------------------------------(15)
           delete p;
           return 0;
+        }
+    },
+    {
+        u8"Monster",
+        []() {
+          WEEK11_2::Monster a, b;
+          a.fight(b);
         }
     }
 });
