@@ -3,7 +3,6 @@
 //
 
 #include <iostream>
-#include <asptlb.h>
 #include "../menu/Menu.h"
 #include "1/A.h"
 #include "1/B.h"

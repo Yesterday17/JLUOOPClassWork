@@ -22,7 +22,7 @@ class Menu {
   std::string title;
   bool LRMode = false;
   std::vector<MenuItem> items;
-  std::vector<Menu*> menus;
+  std::vector<Menu *> menus;
 
   void Refresh(uint16_t i);
   void NLRPrint();
@@ -30,8 +30,8 @@ class Menu {
   void GetCh2(char c);
 
  public:
-  Menu(std::string title, std::vector<MenuItem> items);
-  Menu(std::string title, std::vector<Menu*> menus);
+  Menu(const char *title, std::vector<MenuItem> items);
+  Menu(const char *title, std::vector<Menu *> menus);
   void Increase();
   void Decrease();
   void Reset();

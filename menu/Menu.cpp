@@ -16,12 +16,12 @@ void Clear() {
 }
 #endif
 
-Menu::Menu(std::string title, std::vector<MenuItem> items) {
+Menu::Menu(const char *title, std::vector<MenuItem> items) {
   this->title = title;
   this->items = items;
 }
 
-Menu::Menu(std::string title, std::vector<Menu *> menus) {
+Menu::Menu(const char *title, std::vector<Menu *> menus) {
   this->title = title;
   this->menus = menus;
   this->LRMode = true;
@@ -59,9 +59,11 @@ void Menu::Reset() {
 void Menu::Increase() {
   if ((this->LRMode && this->now < this->menus.size() - 1) || (!this->LRMode && this->now < this->items.size() - 1)) {
     this->now++;
-    Clear();
-    this->Print();
+  } else {
+    this->now = 0;
   }
+  Clear();
+  this->Print();
 }
 
 void Menu::Decrease() {
