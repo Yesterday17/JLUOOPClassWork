@@ -1,16 +1,19 @@
 # 1
-为每个cpp文件都写一个对应的头文件,其中放置对应的cpp文件中的需要向外部公开的函数声明或变量声明、常量声明，最好使用包含警戒。
-本例子中mymain.cpp中由于只有一个main函数(main函数是默认的入口函数)，可以不写mymain.h.
+
+为每个 cpp 文件都写一个对应的头文件,其中放置对应的 cpp 文件中的需要向外部公开的函数声明或变量声明、常量声明，最好使用包含警戒。
+本例子中 mymain.cpp 中由于只有一个 main 函数(main 函数是默认的入口函数)，可以不写 mymain.h.
 其它：
 与 `Func1.cpp` 对应的 `func1.h`
+
 ```cpp
 #ifndef FUNC1H
 #deinfe FUNC1H
-int f1(int num);  
+int f1(int num);
 #endif
 ```
 
 与 `Func2.cpp` 对应的 `func2.h`
+
 ```cpp
 #ifndef FUNC2H
 #deinfe FUNC2H
@@ -18,11 +21,12 @@ int g1(int num);
 int g2(int num);
 #endif
 ```
-  
+
 若某个 `cpp` 文件中需要访问其它 `cpp` 中的函数，只需在其中 `include` 相应的头文件
 如：`func2.cpp` 中用到 `f1` 函数，需在 `func2.cpp` 中加入 `#include "func1.h"`
 
-对于常数/枚举常数，也可放在一个单独的头文件中，如global.h,哪个cpp中要用到这些常量，就在其中 `#include "global.h"`。
+对于常数/枚举常数，也可放在一个单独的头文件中，如 global.h,哪个 cpp 中要用到这些常量，就在其中 `#include "global.h"`。
+
 ```cpp
 #ifndef GLOBALH
 #deinfe GLOBALH
@@ -46,7 +50,7 @@ int main(int argc,char * argv[]) {
 #include "func1.h"
 #include "func2.h"
 int f1(int num) {
-  return g1(num*2);   
+  return g1(num*2);
 }
 ```
 
@@ -62,7 +66,6 @@ int g2(int num) {
   return f1(num*3);
 }
 ```
-
 
 # 5
 
@@ -83,7 +86,6 @@ class TRandom {  public:
 };
 ```
 
- 
 ```cpp
 int main() {
   int cards[54];
@@ -91,22 +93,22 @@ int main() {
     cards[i]=i+1;
 
   TRandom rand;   //创建伪随机数发生器的一个实例对象
-  
+
   //以下是洗牌过程
   for(int j=0;j<54;++j) {
     int pos=rand.Integer(j,53); //pos是一个[j,53]之间的随机数
-    
+
     //交换cards[j]和cards[pos];
     int temp=cards[j];
     cards[j]=cards[pos];
     cards[pos]=temp;
   }
-  
+
   //输出洗牌结果
   for (int k=0;k<54;++k)
     cout<<"Cards["<<k<<"]="<<cards[k]<<endl;
 
-  return 0;  
+  return 0;
 }
 ```
 
@@ -151,9 +153,9 @@ private:
 //  在VC6.0下，需做部分修改。其中随机数函数使用的例子如下：
 //  void srand(unsigned long seed );     功能：设置随机数发生器的种子。
 //  int  rand();      功能：返回0到2的32次方的一个伪随机整数
-//  例：     
+//  例：
 //  #include <iostream.h>
-//  #include <stdlib.h>  
+//  #include <stdlib.h>
 //  #include <time.h>
 
 //  int main(void)
@@ -241,7 +243,7 @@ void Dice::TurnZ() {
 ```
 
 ```cpp
-// diceApp.cpp 
+// diceApp.cpp
 // 程序的主函数
 #include <iostream.h>
 #include "dice.h"
